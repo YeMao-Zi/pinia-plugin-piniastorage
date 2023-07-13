@@ -1,0 +1,18 @@
+{
+  "name": "pinia-plugin-piniastorage",
+  "description": "pinia 的持久化插件,支持自定义存储方式",
+  "version": "1.0.0",
+  "private": false,
+  "main": "index.js",
+  "author": {
+    "name": "YeMao-Zi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YeMao-Zi/ym-sku"
+  },
+  "keywords": [
+    "pinia",
+    "storage"
+  ]
+}
