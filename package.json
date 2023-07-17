@@ -1,11 +1,16 @@
 {
   "name": "pinia-plugin-piniastorage",
   "description": "pinia 的持久化插件,支持自定义存储方式",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "author": {
     "name": "YeMao-Zi"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json"
   },
   "repository": {
     "type": "git",
@@ -14,5 +19,14 @@
   "keywords": [
     "pinia",
     "storage"
-  ]
+  ],
+  "dependencies": {
+    "pinia": "^2.1.4"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
 }

@@ -33,8 +33,7 @@ export function piniaStorage(): PiniaPlugin {
         afterRestore,
         beforeRestore,
         storageWay = {
-          setStorageWay: (key: string, data: any) =>
-            localStorage.setItem(key, data),
+          setStorageWay: (key: string, data: any) => localStorage.setItem(key, data),
           getStorageWay: (key: string) => localStorage.getItem(key),
         },
         serializer = {
@@ -61,7 +60,7 @@ export function piniaStorage(): PiniaPlugin {
             storageWay.setStorageWay(key, serializer.serialize(toStore));
           } catch (_error) {}
         },
-        { detached: true },
+        { detached: true }
       );
     }
   };
