@@ -1,7 +1,7 @@
 {
   "name": "pinia-plugin-piniastorage",
   "description": "pinia 的持久化插件,支持自定义存储方式",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -6,7 +6,7 @@ pinia 的持久化插件，所有的都是可扩展的包括持久存储的方�
 
 ## 下载
 ```
-npm i pinia-plugin-piniastorage -D
+npm i pinia-plugin-piniastorage
 ```
 
 ## 注册

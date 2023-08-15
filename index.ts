@@ -1,3 +1,9 @@
 export { piniaStorage } from "./lib/plugin";
 
-export type { YmStateOptions } from "./lib/types";
+import type { YmStateOptions } from "./lib/types";
+
+declare module "pinia" {
+  export interface DefineStoreOptionsBase<S extends StateTree, Store> {
+    storeOptions?: YmStateOptions;
+  }
+}
