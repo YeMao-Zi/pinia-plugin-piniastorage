@@ -23,7 +23,7 @@ export function pick(baseState: StateTree, paths: string[]): StateTree {
   }, {});
 }
 
-export function piniaStorage(): PiniaPlugin {
+export function piniaStorage() {
   return function (ctx) {
     {
       const { store, options } = ctx;
@@ -63,5 +63,7 @@ export function piniaStorage(): PiniaPlugin {
         { detached: true }
       );
     }
-  };
+  } as PiniaPlugin;
 }
+
+export default piniaStorage()

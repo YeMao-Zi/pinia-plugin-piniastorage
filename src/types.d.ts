@@ -1,4 +1,5 @@
-import type { PiniaPluginContext, StateTree } from "pinia";
+import * as pinia from "pinia";
+import { StateTree, PiniaPluginContext, PiniaPlugin } from "pinia";
 
 export interface Serializer {
   /**
@@ -66,3 +67,10 @@ export interface YmStateOptions {
    */
   afterRestore?: (context: PiniaPluginContext) => void;
 }
+
+declare module "pinia" {
+  export interface DefineStoreOptionsBase<S, Store> {
+    storeOptions?: YmStateOptions;
+  }
+}
+
