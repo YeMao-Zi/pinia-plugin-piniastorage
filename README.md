@@ -14,7 +14,7 @@ npm i pinia-plugin-piniastorage
 import { createApp } from 'vue';
 import App from './App.vue';
 import { createPinia } from 'pinia';
-import { piniaStorage } from "pinia-plugin-piniaStorage";
+import { piniaStorage } from "pinia-plugin-piniastorage";
 
 const store = createPinia();
 store.use(piniaStorage());
