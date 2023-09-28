@@ -6,7 +6,7 @@ export default defineConfig({
   clearScreen: false,
   resolve: {
     alias: {
-      "@wsvaio/pinia-plugin-persist": path.resolve(__dirname, "../src/index.ts"),
+      "pinia-plugin-piniastorage": path.resolve(__dirname, "../src/index.ts"),
       "@": path.resolve(__dirname),
     },
   },
