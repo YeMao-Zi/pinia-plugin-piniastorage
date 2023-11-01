@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import { piniaStorage } from "../dist";
+import { piniaStorage } from "../src";
 import App from "./App.vue";
 
 const pinia = createPinia();

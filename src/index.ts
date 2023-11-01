@@ -44,17 +44,25 @@ export function piniaStorage() {
       } = options.storeOptions || {};
       if (!openStorage) return;
 
-      beforeRestore && beforeRestore?.(ctx);
+      beforeRestore?.(ctx);
+      console.log(store.$state, "store");
 
       try {
         const fromStorage = storageWay.getStorageWay(key);
-        if (fromStorage) store.$patch(serializer.deserialize(fromStorage));
+        if (fromStorage) {
+          store.$patch(serializer.deserialize(fromStorage));
+        } else {
+          // 初始化
+          const toStore = Array.isArray(paths) ? pick(store.$state, paths) : store.$state;
+          storageWay.setStorageWay(key, serializer.serialize(toStore));
+        }
       } catch (_error) {}
 
-      afterRestore && afterRestore?.(ctx);
+      afterRestore?.(ctx);
 
       store.$subscribe(
         (_, state) => {
+          console.log(state, "state");
           try {
             const toStore = Array.isArray(paths) ? pick(state, paths) : state;
             storageWay.setStorageWay(key, serializer.serialize(toStore));
@@ -66,4 +74,4 @@ export function piniaStorage() {
   } as PiniaPlugin;
 }
 
-export default piniaStorage()
+export default piniaStorage();
