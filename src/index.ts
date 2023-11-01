@@ -45,7 +45,6 @@ export function piniaStorage() {
       if (!openStorage) return;
 
       beforeRestore?.(ctx);
-      console.log(store.$state, "store");
 
       try {
         const fromStorage = storageWay.getStorageWay(key);
@@ -62,7 +61,6 @@ export function piniaStorage() {
 
       store.$subscribe(
         (_, state) => {
-          console.log(state, "state");
           try {
             const toStore = Array.isArray(paths) ? pick(state, paths) : state;
             storageWay.setStorageWay(key, serializer.serialize(toStore));
