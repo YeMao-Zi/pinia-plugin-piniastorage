@@ -1,7 +1,7 @@
 {
   "name": "pinia-plugin-piniastorage",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "pinia 的持久化插件,支持自定义存储方式",
   "author": {
     "name": "YeMao-Zi"
